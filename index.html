@@ -5,26 +5,70 @@
     <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
     <!-- Replace the content tag with appropriate information -->
     <meta name="description" content="DESCRIPTION META TAG" />
-    <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+    <meta property="og:title" content="Generalizing Safety Beyond Collision-Avoidance via Latent-Space
+    Reachability Analysis" />
     <meta
       property="og:description"
-      content="SOCIAL MEDIA DESCRIPTION TAG TAG"
+      content="Hamilton-Jacobi (HJ) reachability is a rigorous
+      mathematical framework that enables robots to simultaneously
+      detect unsafe states and generate actions that prevent future
+      failures. While in theory, HJ reachability can synthesize safe
+      controllers for nonlinear systems and nonconvex constraints,
+      in practice, it has been limited to hand-engineered collision-
+      avoidance constraints modeled via low-dimensional state-space
+      representations and first-principles dynamics. In this work, our
+      goal is to generalize safe robot controllers to prevent failures
+      that are hard—if not impossible—to write down by hand, but
+      can be intuitively identified from high-dimensional observations:
+      for example, spilling the contents of a bag. We propose Latent
+      Safety Filters, a latent-space generalization of HJ reachability that
+      tractably operates directly on raw observation data (e.g., RGB
+      images) by performing safety analysis in the latent embedding
+      space of a generative world model. This transforms nuanced
+      constraint specification to a classification problem in latent space
+      and enables reasoning about dynamical consequences that are
+      hard to simulate. In simulation and hardware experiments, we
+      use Latent Safety Filters to safeguard arbitrary policies (from
+      generative policies to direct teleoperation) from complex safety
+      hazards, like preventing a Franka Research 3 manipulator from
+      spilling the contents of a bag or toppling cluttered objects."
     />
     <meta property="og:url" content="URL OF THE WEBSITE" />
     <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-    <meta property="og:image" content="static/image/your_banner_image.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:image" content="static/image/frontfig_latentsafety3" />
 
-    <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG" />
+    <meta name="twitter:title" content="Generalizing Safety Beyond Collision-Avoidance via Latent-Space
+    Reachability Analysis" />
     <meta
       name="twitter:description"
-      content="TWITTER BANNER DESCRIPTION META TAG"
+      content="Hamilton-Jacobi (HJ) reachability is a rigorous
+      mathematical framework that enables robots to simultaneously
+      detect unsafe states and generate actions that prevent future
+      failures. While in theory, HJ reachability can synthesize safe
+      controllers for nonlinear systems and nonconvex constraints,
+      in practice, it has been limited to hand-engineered collision-
+      avoidance constraints modeled via low-dimensional state-space
+      representations and first-principles dynamics. In this work, our
+      goal is to generalize safe robot controllers to prevent failures
+      that are hard—if not impossible—to write down by hand, but
+      can be intuitively identified from high-dimensional observations:
+      for example, spilling the contents of a bag. We propose Latent
+      Safety Filters, a latent-space generalization of HJ reachability that
+      tractably operates directly on raw observation data (e.g., RGB
+      images) by performing safety analysis in the latent embedding
+      space of a generative world model. This transforms nuanced
+      constraint specification to a classification problem in latent space
+      and enables reasoning about dynamical consequences that are
+      hard to simulate. In simulation and hardware experiments, we
+      use Latent Safety Filters to safeguard arbitrary policies (from
+      generative policies to direct teleoperation) from complex safety
+      hazards, like preventing a Franka Research 3 manipulator from
+      spilling the contents of a bag or toppling cluttered objects."
     />
     <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
     <meta
       name="twitter:image"
-      content="static/images/your_twitter_banner_image.png"
+      content="static/images/frontfig_latentsafety3.png"
     />
     <meta name="twitter:card" content="summary_large_image" />
     <!-- Keywords for your paper to be indexed by-->
