@@ -204,138 +204,40 @@
         </div>
       </div>
     </section>
-    <!-- End paper abstract -->
 
-    <!-- Image carousel -->
-    <section class="hero is-small">
-      <div class="hero-body">
-        <div class="container">
-          <div id="results-carousel" class="carousel results-carousel">
-            
-            <div class="item">
-              <!-- Your image here -->
-              <img src="static/pdfs/latent-vs-priv-brts.pdf" alt="MY ALT TEXT" />
-              <h2 class="subtitle has-text-centered">
-                Second image description.
-              </h2>
-            </div>
-            <div class="item">
-              <!-- Your image here -->
-              <img src="static/pdfs/latent-brts-reduced-actions.pdf" alt="MY ALT TEXT" />
-              <h2 class="subtitle has-text-centered">
-                Third image description.
-              </h2>
-            </div>
-            <div class="item">
-              <!-- Your image here -->
-              <img src="static/pdfs/brt_retract_manip.pdf" alt="MY ALT TEXT" />
-              <h2 class="subtitle has-text-centered">
-                First image description.
-              </h2>
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Method</h2>
+            <div class="content has-text-justified">
+              <p>
+
+                <img src="static/images/frontfig_latentsafety3.png" alt="Description" width="100"> 
+                Our Latent Safety Filter can detect, predict, and mitigate failures that are hard to model (e.g., spilling the contents of
+a bag), such as those encountered in vision-based manipulation. Our idea is to perform approximate reachability analysis in
+the latent space of a world model (light grey region). The latent failure set is shown as a black region, with an example of an
+imagined failure observation shown in the upper right. Our method identifies latent states from which the robot is doomed to
+enter visually-observable failures no matter what actions it takes (larger red set shown above), and automatically overrides the
+base policy with safety-preserving actions from our safety policy to prevent spilling the content of the bag.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- End image carousel -->
 
-    <!-- Youtube video -->
-    <section class="hero is-small is-light">
-      <div class="hero-body">
-        <div class="container">
-          <!-- Paper video. -->
-          <h2 class="title is-3">Video Presentation</h2>
-          <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-              <div class="publication-video">
-                <!-- Youtube embed code here -->
-                <iframe
-                  src="https://www.youtube.com/embed/JkaxUblCGz0"
-                  frameborder="0"
-                  allow="autoplay; encrypted-media"
-                  allowfullscreen
-                ></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End youtube video -->
-
-    <!-- Video carousel -->
-    <section class="hero is-small">
-      <div class="hero-body">
-        <div class="container">
-          <h2 class="title is-3">Another Carousel</h2>
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="item item-video1">
-              <video
-                poster=""
-                id="video1"
-                autoplay
-                controls
-                muted
-                loop
-                height="100%"
-              >
-                <!-- Your video file here -->
-                <source src="static/videos/carousel1.mp4" type="video/mp4" />
-              </video>
-            </div>
-            <div class="item item-video2">
-              <video
-                poster=""
-                id="video2"
-                autoplay
-                controls
-                muted
-                loop
-                height="100%"
-              >
-                <!-- Your video file here -->
-                <source src="static/videos/carousel2.mp4" type="video/mp4" />
-              </video>
-            </div>
-            <div class="item item-video3">
-              <video
-                poster=""
-                id="video3"
-                autoplay
-                controls
-                muted
-                loop
-                height="100%"
-              >
-                \
-                <!-- Your video file here -->
-                <source src="static/videos/carousel3.mp4" type="video/mp4" />
-              </video>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End video carousel -->
-
-    <!-- Paper poster -->
-    <section class="hero is-small is-light">
-      <div class="hero-body">
-        <div class="container">
-          <h2 class="title">Poster</h2>
-
-          <iframe src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        </div>
-      </div>
-    </section>
-    <!--End paper poster -->
-
+  
     <!--BibTex citation -->
     <section class="section" id="BibTeX">
       <div class="container is-max-desktop content">
         <h2 class="title">BibTeX</h2>
-        <pre><code>BibTex Code Here</code></pre>
+        <pre><code>@article{nakamura2025generalizing,
+          title={Generalizing Safety Beyond Collision-Avoidance via Latent-Space Reachability Analysis},
+          author={Nakamura, Kensuke and Peters, Lasse and Bajcsy, Andrea},
+          year={2025}
+        }</code></pre>
       </div>
     </section>
     <!--End BibTex citation -->
