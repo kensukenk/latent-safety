@@ -398,7 +398,11 @@
             <div class="content has-text-justified">
               <p>
                 Our latent safety filter is not without limitations. Despited being grounded in rigorous theory,
-                our method does not ensure safety in all cases. In simulation, we find that our value function can 
+                our method does not ensure safety in all cases. This is a natural consequence of using learned world models and learning-based approximations
+                of the Hamilton-Jacobi value function in our experiments. Quantifying the inaccuracies and understanding how these
+                latent safety filters fail is an exciting direction for future work.
+                <br>
+                In simulation, we find that our value function can 
                 occassionally allow the robot to take an unsafe action. We believe that this can be attributed to the quality
                 of the world model not correctly predicting the consequences of a given action. We show a failure mode below.
                 <br>
