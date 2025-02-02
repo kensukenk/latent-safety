@@ -363,11 +363,22 @@
             <h2 class="title is-3">Hardware Experiments</h2>
             <div class="content has-text-justified">
               <p>
-                We test our latent safety filter on hardware on a contact-rich manipulation task: picking up an opened bag of Skittles.
-                Our safety specification is not allowing any skittles in the bag to fall out. This is challenging due to the partial observability
+                We test our latent safety filter on hardware on a contact-rich manipulation task: picking up an opened bag of Skittles. Our safety specification is not allowing any skittles in the bag to fall out.
+                
+                <b> Direct Teleoperation (no filter)</b>
+                <br>
+                <video width="640" height="360" controls>
+                  <source src="static/videos/spill fail.mp4" type="video/mp4">
+                </video>
+                <br>
+
+                This is challenging due to the partial observability
                 and uncertain dynamics of the overall environment. We conduct reachability analysis in the latent space of DINO-WM, a ViT-based world model
                 that uses the patch tokens of DINOv2 as a latent state.
                 <br>
+
+                <b> Teleoperation with Latent Safety Filter</b>
+                <br
                 <video width="640" height="360" controls>
                   <source src="static/videos/one_shot_plot_lowres.mp4" type="video/mp4">
                 </video>
