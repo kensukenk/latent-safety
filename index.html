@@ -4,7 +4,9 @@
     <meta charset="utf-8" />
     <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
     <!-- Replace the content tag with appropriate information -->
-    <meta name="description" content="DESCRIPTION META TAG" />
+    <meta name="description" content="Latent Safety Filters extend HJ reachability to prevent failures in robotics using latent-space safety analysis on high-dimensional observations." />
+    <meta property="og:title" content="Generalizing Safety Beyond Collision-Avoidance via Latent-Space
+    Reachability Analysis" />
     <meta property="og:title" content="Generalizing Safety Beyond Collision-Avoidance via Latent-Space
     Reachability Analysis" />
     <meta
@@ -33,7 +35,7 @@
       hazards, like preventing a Franka Research 3 manipulator from
       spilling the contents of a bag or toppling cluttered objects."
     />
-    <meta property="og:url" content="URL OF THE WEBSITE" />
+    <meta property="og:url" content="https://kensukenk.github.io/latent-safety/" />
     <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
     <meta property="og:image" content="static/image/frontfig_latentsafety3" />
 
@@ -72,7 +74,7 @@
     />
     <meta name="twitter:card" content="summary_large_image" />
     <!-- Keywords for your paper to be indexed by-->
-    <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE" />
+    <meta name="keywords" content="Hamilton-Jacobi, Reachability, Safety, Robotics, Latent Space, Safety Filters, Safety Analysis, Generative World Model, Safety Policy" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>
@@ -127,7 +129,7 @@
                 Generalizing Safety Beyond Collision-Avoidance via Latent-Space
                 Reachability Analysis
               </h1>
-              
+
               <div class="is-size-5 publication-authors">
                 <span class="author-block">
                   <a href="kensukenk.github.io" target="_blank"
@@ -147,33 +149,33 @@
               </div>
 
               <div class="is-size-5 publication-authors">
-                
+
                 <span class="eql-cntrb"
                   ><small
                     ><br /><sup>1</sup>Carnegie Mellon University <sup>2</sup>Delft University of Technology</small
                   ></span
                 >
               </div>
-            
+
 
               <div class="column has-text-centered">
                 <div class="publication-links">
                   <!-- Arxiv PDF link -->
-                   
+
                   <span class="link-block">
                     <a
-                      href=""
+                      href="https://arxiv.org/pdf/2502.00935"
                       target="_blank"
                       class="external-link button is-normal is-rounded is-dark"
                     >
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
                       </span>
-                      <span>Paper [coming soon]</span>
+                      <span>Paper</span>
                     </a>
                   </span>
 
-                  
+
 
                   <!-- Github link -->
                   <span class="link-block">
@@ -192,7 +194,7 @@
                   <!-- ArXiv abstract Link -->
                   <span class="link-block">
                     <a
-                      href=""
+                      href="https://arxiv.org/abs/2502.00935"
                       target="_blank"
                       class="external-link button is-normal is-rounded is-dark"
                     >
@@ -286,7 +288,7 @@
       </div>
     </section>
 
-  
+
     <!-- Paper abstract -->
     <section class="section hero is-light">
       <div class="container is-max-desktop">
@@ -297,14 +299,14 @@
               <p>
                 We start by studying a canonical safe-control benchmark:
                 collision-avoidance of a static obstacle with a vehicle. Because
-                this is a standard, low-dimensional benchmark, we can rigorously compare the quality of the safety filter to an exact 
+                this is a standard, low-dimensional benchmark, we can rigorously compare the quality of the safety filter to an exact
                 grid-based solution and a privileged-state RL-based safety filter.
                 <div style="text-align: center;">
                   <img src="static/images/latent-vs-priv-brts.png" alt="Description" width="1100">
                 </div>
                 We train an RSSM using 2000 offline trajectories consisting of randomly sampled actions and conduct reachability analysis in the
                 learned latent space of the world model. Our latent safety filter is comparable to the privileged state RL-baseline (PrivilegedSafe) and has an F1 score of 0.982
-                
+
                 <div style="text-align: center;">
                   <img src="static/images/dubins_latent_table.png" alt="Description" width="1100">
                 </div>
@@ -366,7 +368,7 @@
             <div class="content has-text-justified">
               <p>
                 We test our latent safety filter on hardware on a contact-rich manipulation task: picking up an opened bag of Skittles. Our safety specification is not allowing any skittles in the bag to fall out.
-                
+
                 <h6 class="title is-3">Direct Teleoperation (no filter)</h2>
                 <br>
                 <video width="640" height="360" controls>
@@ -389,7 +391,7 @@
 
                 Notably, our policy is entirely agnostic to the base policy used to perform the task. This means we are even able to shield
                 a human teleoperating the robot.
-                
+
                 <br>
                 <div style="text-align: center;">
                   <img src="static/images/teleop_val.png" alt="Description" width="1100">
@@ -415,7 +417,7 @@
                 of the Hamilton-Jacobi value function in our experiments. Quantifying the inaccuracies and understanding how these
                 latent safety filters fail is an exciting direction for future work.
                 <br>
-                In simulation, we find that our value function can 
+                In simulation, we find that our value function can
                 occassionally allow the robot to take an unsafe action. We believe that this can be attributed to the quality
                 of the world model not correctly predicting the consequences of a given action. We show a failure mode below.
                 <br>
@@ -426,17 +428,17 @@
 
 
                 <br>
-              
+
                 Our hardware experiments also exhibit non-zero failure rates. We believe that a large reason for this
-                is due to the partial observability of the skittle bag pick up task. It is unclear from the persepective of 
-                the robot where the locations of the skittles inside the bag are. As such, occassionally the filter allows 1-2 
+                is due to the partial observability of the skittle bag pick up task. It is unclear from the persepective of
+                the robot where the locations of the skittles inside the bag are. As such, occassionally the filter allows 1-2
                 skittles to fall out of the bag. We show a video of this failure mode below.
                 <br>
                 <video width="640" height="360" controls>
                   <source src="static/videos/hw_failuremode.mp4" type="video/mp4">
                 </video>
 
-                
+
                 </p>
             </div>
           </div>
