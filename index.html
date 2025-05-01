@@ -396,6 +396,13 @@
                   <img src="static/images/teleop_val.png" alt="Description" width="1100">
                 </div>
 
+
+                We also stress-test our latent safety filter on out-of-distribution bags. We find that our latent safety filter can zero-shot generalize to skittle bags of different colors, or background changes.
+                <br>
+                <video width="640" height="360" controls>
+                  <source src="static/videos/latent-ood.mp4" type="video/mp4">
+                </video>
+                We hypothesize that this generalization capability is due to the strong pretrained visual representation in DINOv2.
                 </p>
             </div>
           </div>
@@ -436,7 +443,13 @@
                 <video width="640" height="360" controls>
                   <source src="static/videos/hw_failuremode.mp4" type="video/mp4">
                 </video>
+                
 
+                We also demonstrate a more severe failure mode that arises when the opened end of the bag is unobservable from the wrist or front-facing camera.
+                <br>
+                <video width="640" height="360" controls>
+                  <source src="static/videos/latent-pomdp.mp4" type="video/mp4">
+                </video>
 
                 </p>
             </div>
